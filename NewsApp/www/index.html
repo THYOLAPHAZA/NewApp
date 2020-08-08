@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- CSP -->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src * data: gap: https://ssl.gstatic.com 'unsafe-inline' 'unsafe-eval'; style-src * 'unsafe-inline'; media-src *">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <!-- bootstrap.css -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <!-- Theme Colors -->
+  <link id="theme" rel="stylesheet" href="css/bootstrap/theme-red.css">
+  <!-- font Awesome Icons -->
+  <link href="fontawesome/css/all.css" rel="stylesheet">
+  <title>TheNewsApp</title>
+</head>
+
+<body class="theme-l5">
+
+  <!-- Loading Bar -->
+  <div id="loaderBar">
+    <div id="loader"></div>
+  </div>
+
+  <!-- Settings Page -->
+  <div class="sidebar bar-block white animate-left theme" style="display:none;z-index:4;min-width:100%;"
+    id="settingsPage">
+    <button class="bar-item button large border-bottom" id="closeSettingsPageButton">Close &times;</button>
+
+    <!-- News Settings Area -->
+    <div class="bar-item border-bottom">
+
+      <h6>Select your preferred Country:</h6>
+
+      <!-- News Country Dropdown -->
+      <select class="select theme" style="border:none" id="selectCountry">
+        <option value="us">USA</option>
+      </select>
+
+      <!-- News Category Chips -->
+      <h6 class="margin-top">Selected categories:</h6>
+      <div id="cats">
+      </div>
+
+      <h6>Available categories:</h6>
+
+      <div class="" id="selectedCats"></div>
+      <button class="btn round theme-l2 margin-top block" id="saveNewsSettings">Save</button>
+    </div>
+
+    <!-- Settings -->
+    <div class="bar-item border-bottom">
+      <h4>Settings</h4>
+      <h6>Colors:</h6>
+
+      <select class="select theme" style="border:none" id="uiSettingsTheme">
+        <option class="redTheme" value="red">Pink</option>
+      </select>
+
+      <button class="btn round theme-l2 margin-top  block" id="saveUiSettings">Save</button>
+    </div>
+
+    <div class="bar-item">
+
+      <button class="btn round theme-l2 margin-top  block" id="clearAllSettings">Reset</button>
+    </div>
+
+  </div>
+
+  <!-- Menu -->
+  <div class="top theme animate-bottom ">
+    <div class="bar">
+      <!-- Mnu Icons -->
+      <a href="#" class="bar-item button large" id="backButton"><i class="fa fa-arrow-left"></i></a>
+
+      <!-- Search -->
+      <a href="#" class="bar-item button right" id="searchButton"><i class="fa fa-search"></i></a>
+      <input type="text" class="bar-item input theme right" id="searchField" placeholder="Search..">
+    </div>
+  </div>
+  <!-- Menu Bar Ende -->
+
+  <!-- Categories -->
+  <div id="categoriesTab">
+  </div>
+
+  <!-- Title Card -->
+  <div class="card-4 margin animate-bottom">
+    <div class="container" style="text-align: center;">
+      <div class="cardTitle" id="topHeadlines">Top Stories</div>
+    </div>
+  </div>
+  <!-- Title Card Ende -->
+
+  <!-- Timeline -->
+  <div class="container">
+    <div id="timeline">
+    </div>
+  </div>
+
+  <!-- INfo TAb -->
+  <div class="" id="infoTab">Unable to load any content</div>
+
+  <!-- Initialize Cordova and JS Bundle -->
+  <script type="text/javascript" src="cordova.js"></script>
+  <script type="text/javascript" src="js/dist/bundle.js"></script>
+</body>
+
+</html>
